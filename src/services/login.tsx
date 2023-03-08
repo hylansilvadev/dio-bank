@@ -1,7 +1,17 @@
+import { 
+    ChakraProvider,
+    Text,
+    AbsoluteCenter
+ } from "@chakra-ui/react"
+
 export const Login = () =>{
     return(
-        <div>
-            <h1>Bem Vindo!</h1>
-        </div>
+        <ChakraProvider>
+            <AbsoluteCenter>
+                <Text
+                fontSize='4xl'
+                >Bem Vindo!</Text>
+            </AbsoluteCenter>
+        </ChakraProvider>
     )
 }

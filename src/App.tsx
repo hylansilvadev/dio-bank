@@ -82,13 +82,17 @@ export const App = () => {
                     isOpen={isOpen} 
                     onClose={onClose}>
                       {overlay}
-                    <ModalContent>
-                    <ModalBody>
-                      <Text>
-                        <Login />
-                      </Text>
+                  <ModalContent
+                  borderRadius='25px'
+                  minWidth='25vw'
+                  minHeight='27vh'
+                  >
+                    <ModalBody
+                    padding='15px'
+                    >
+                      <Login/>
+                      <ModalCloseButton />
                     </ModalBody>
-                    <ModalCloseButton />
                   </ModalContent>
                 </Modal>
                   </Center>
