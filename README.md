@@ -1,3 +1,17 @@
+# Frontend Dio Bank 
+
+página de login criada para o projeto do Dio Bank
+
+
+Criado por: [Hylan Silva](https://github.com/hylansilva)
+### Tecnologias Usadas
+ - TypeScript
+ - React.Ts
+ - Styled-Components
+ - Jest
+ - Chakra Ui
+
+
 ### Como rodar o projeto
 
 1 - Clone o reposítório
