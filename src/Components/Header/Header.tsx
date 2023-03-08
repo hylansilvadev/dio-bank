@@ -1,14 +1,19 @@
-import {
-    Heading
-} from '@chakra-ui/react'
+import { 
+    ChakraProvider,
+    Heading,
+    Center
+} from "@chakra-ui/react"
 
-export const Header = () => {
-    return (
-        <div>
-            <Heading
-                colorScheme="#ffffff"
-                backgroundColor=""
-            >Dio Bank</Heading>
-        </div>
-    );
+export const Header = () =>{
+    return(
+        <ChakraProvider>
+            <Center>
+                <Heading
+                color='white'
+                >
+                    Dio Bank
+                </Heading>
+            </Center>
+        </ChakraProvider>
+    )
 }

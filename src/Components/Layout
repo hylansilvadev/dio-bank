@@ -1,9 +1,0 @@
-import { Header } from './Header/Header'
-import { Footer } from './Footer'
-export const Layout = ({childrem}):any =>{
-    return(
-        <Header />
-        {childrem}
-        <Footer />
-    )
-}
