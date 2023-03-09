@@ -12,13 +12,21 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalOverlay,
-  useDisclosure
+  useDisclosure,
+  Flex,
+  Badge,
+  Link
 } from '@chakra-ui/react';
+
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 import React from 'react';
+
 import { Layout } from './Components/Layout';
 
 import { Login } from './services/login'
 
+import './App.css'
 export const App = () => {
   const OverlayOne = () => (
     <ModalOverlay
@@ -99,6 +107,29 @@ export const App = () => {
                 </Box>
               </AbsoluteCenter>
           </Layout>
+          <Center className='bottom'>
+            <Flex>
+              <Avatar src='https://pps.whatsapp.net/v/t61.24694-24/322511880_102892859367639_7053001873785196728_n.jpg?ccb=11-4&oh=01_AdTlhpvvSAx_doTgPqEIIllM_cuVHSGQW6bDO1h94zqVcQ&oe=6416D2FA' />
+              <Box ml='3' >
+                <Text 
+                fontWeight='bold'
+                color='white'
+                >
+                  <Link href='https://github.com/hylansilva' isExternal>
+                    Hylan Silva
+                    <Badge ml='1' colorScheme='whatsapp'>
+                      New
+                    </Badge> 
+                    <ExternalLinkIcon mx='2px' />
+                  </Link>
+                </Text>
+                <Text 
+                fontSize='sm'
+                color='white'
+                >TypeScript Developer</Text>
+              </Box>
+            </Flex>
+          </Center>
         </Box>
       </ChakraProvider>
     </>
