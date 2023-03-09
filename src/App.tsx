@@ -52,16 +52,18 @@ export const App = () => {
                 backgroundColor='#ffffff'
                 borderRadius='25px'
                 padding='15px'
-                width='25vw'
+                width='50vw'
+                minWidth='45vw'
                 >
                   <Center paddingBottom='5px'>
                     <Text fontSize='xl'>Faça Login</Text>
                   </Center>
                   <Center>
-                    <Avatar
+                    < Avatar
                     margin='8px'
-                    >
-                    </Avatar>
+                    size='xl'
+                    />
+                    
                   </Center>
                   <Input 
                   placeholder="email" 
@@ -109,7 +111,7 @@ export const App = () => {
           </Layout>
           <Center className='bottom'>
             <Flex>
-              <Avatar src='https://pps.whatsapp.net/v/t61.24694-24/322511880_102892859367639_7053001873785196728_n.jpg?ccb=11-4&oh=01_AdTlhpvvSAx_doTgPqEIIllM_cuVHSGQW6bDO1h94zqVcQ&oe=6416D2FA' />
+              <Avatar  src='https://pps.whatsapp.net/v/t61.24694-24/322511880_102892859367639_7053001873785196728_n.jpg?ccb=11-4&oh=01_AdTlhpvvSAx_doTgPqEIIllM_cuVHSGQW6bDO1h94zqVcQ&oe=6416D2FA' />
               <Box ml='3' >
                 <Text 
                 fontWeight='bold'
