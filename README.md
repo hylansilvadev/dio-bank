@@ -10,6 +10,7 @@ Criado por: [Hylan Silva](https://github.com/hylansilva)
  - Styled-Components
  - Jest
  - Chakra Ui
+ - React Router
 
 
 ### Como rodar o projeto

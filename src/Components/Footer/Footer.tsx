@@ -37,7 +37,7 @@ export const Footer = () =>{
                         <Link href='https://github.com/hylansilva' isExternal>
                         Hylan Silva
                         <Badge ml='1' colorScheme='whatsapp'>
-                            New
+                            Student
                         </Badge> 
                         <ExternalLinkIcon mx='2px' />
                         </Link>

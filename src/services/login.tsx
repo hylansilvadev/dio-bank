@@ -1,17 +1,9 @@
-import { 
-    ChakraProvider,
-    Text,
-    AbsoluteCenter
- } from "@chakra-ui/react"
+import { api } from "../api"
 
-export const Login = () =>{
-    return(
-        <ChakraProvider>
-            <AbsoluteCenter>
-                <Text
-                fontSize='4xl'
-                >Bem Vindo!</Text>
-            </AbsoluteCenter>
-        </ChakraProvider>
-    )
+export const Login = async(email:string):Promise<void> =>{
+    const data: any = await api
+    if(email !== data.email){
+        return alert('Email Inválido')
+    }
+    alert(`Bem vindo ${email} !`)
 }
