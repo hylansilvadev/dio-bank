@@ -18,13 +18,14 @@ describe('teste de login',()=>{
     const mockAlert = jest.fn()
     window.alert = mockAlert
     const mockEmail = 'teste@teste.bank'
+    const mockPassowrd = 'root'
 
     it('Deve exibir um alert com um bem vindo caso o email seja válido', async()=>{
-        const response = await Login(mockEmail)
+        const response = await Login(mockEmail, mockPassowrd)
         expect(response).toBeTruthy()
     })
-    it('Deve exiir um erro caso o email seja inválido',async()=>{
-        const response = await Login('email@invalido.com')
+    it('Deve exibir um erro caso o email seja inválido',async()=>{
+        const response = await Login('','')
         expect(response).toBeFalsy()
     })
 })

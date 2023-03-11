@@ -11,13 +11,17 @@ import { AppContext } from '../Components/AppContext'
 export const Home = () =>{
 
     const [email, setEmail] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
     const navigate = useNavigate()
     const {setIsLoggedIn} = useContext(AppContext)
-    const validateUser = async (email:string) => {
-        const loggedIn = await Login(email)
+    const validateUser = async (email:string, password: string) => {
+        const loggedIn = await Login(email,password)
 
         if(!loggedIn){
-            alert('email inválido')
+            alert('email ou senha inválidos')
+            setEmail('')
+            setPassword('')
+
         }else{
             setIsLoggedIn(true)
             navigate(`/account/userText`)
@@ -52,8 +56,10 @@ export const Home = () =>{
                             <Input 
                             placeholder="password" 
                             type='password'
+                            value={password}
+                            onChange={(event)=>setPassword(event.target.value)}
                             />
-                            <DButton onClick={()=>{validateUser(email)}}/>
+                            <DButton onClick={()=>{validateUser(email, password)}}/>
                         <Center>
                     </Center>
             </Card>
