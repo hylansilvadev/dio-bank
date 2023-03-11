@@ -4,7 +4,7 @@ import { Spinner } from "@chakra-ui/react"
 import { useContext, useEffect, useState } from "react"
 import { api } from "../api"
 import { CardInfo } from "../Components/Cards/CardInfon"
-import { AppContext } from "../App"
+import { AppContext } from "../Components/AppContext"
 
 interface userData{
     email: string,
@@ -17,8 +17,11 @@ interface userData{
 export const Account = () => {
 
     const [userData, setUserData] = useState<null | userData>()
+    const {isLoggedIn} = useContext(AppContext)
+    const {id} = useParams()
+    const navigate = useNavigate()
     
-    const context = useContext(AppContext)
+    !isLoggedIn && navigate('/')
     
 
     useEffect(() => {
@@ -31,8 +34,6 @@ export const Account = () => {
 
     const actualData = new Date()
 
-    const {id} = useParams()
-    const navigate = useNavigate()
     if(userData && id !== userData.id){
         navigate('/')
     }

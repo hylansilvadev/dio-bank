@@ -4,23 +4,8 @@ import { Account } from './pages/Account'
 import { ChakraProvider } from '@chakra-ui/react';
 import { Layout } from './Components/Layout';
 import { AccountInfo } from './pages/AccountInfo';
-import { createContext } from 'react';
+import { AppContextProvider } from './Components/AppContext';
 
-interface IAppContext {
-  user:string
-}
-
-export const AppContext = createContext({} as IAppContext)
-
-const AppContextProvider = ({children}:any) =>{
-  const user = 'user'
-
-  return (
-    <AppContext.Provider value={{user}}>
-      {children}
-    </AppContext.Provider>
-  )
-}
 export const App = () => {
   return (
     <BrowserRouter>

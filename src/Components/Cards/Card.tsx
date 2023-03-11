@@ -7,7 +7,7 @@ export const Card = ({children}:any) =>{
                     minHeight={120}
                     width={320}
                     borderRadius={25}
-                    padding={'0 15px'}
+                    padding={'15px 15px'}
                     display='flex'
                     justifyContent='Center'
                     flexDirection='column'
