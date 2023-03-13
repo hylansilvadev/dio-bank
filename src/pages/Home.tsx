@@ -8,8 +8,9 @@ import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../Components/AppContext'
 
-export const Home = () =>{
 
+export const Home = () =>{
+    
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const navigate = useNavigate()

@@ -1,22 +1,6 @@
 import { Login } from "./login";
 
-// const mockSetIsLoggedIn = jest.fn()
-// jest.mock('react',()=>({
-//     ...jest.requireActual('react'),
-//     useContext: () =>({
-//         setIsLoggedIn: mockSetIsLoggedIn
-//     })
-// }))
-
-// const mockUseNavigate = jest.fn()
-// jest.mock('react-router-dom',()=>({
-//     ...jest.requireActual('react-router-dom') as any,
-//     useNavigate: () =>  mockUseNavigate 
-// }))
-
 describe('teste de login',()=>{
-    const mockAlert = jest.fn()
-    window.alert = mockAlert
     const mockEmail = 'teste@teste.bank'
     const mockPassowrd = 'root'
 
@@ -24,8 +8,9 @@ describe('teste de login',()=>{
         const response = await Login(mockEmail, mockPassowrd)
         expect(response).toBeTruthy()
     })
-    it('Deve exibir um erro caso o email seja inválido',async()=>{
+    it('Deve exibir um erro caso o email ou a senha estejam nulos',async()=>{
         const response = await Login('','')
         expect(response).toBeFalsy()
     })
+    
 })
