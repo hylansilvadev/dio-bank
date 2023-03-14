@@ -19,6 +19,7 @@ export const CardInfo = ({mainContent, content}:ICardInfo) =>{
                         <Text
                     fontWeight={'medium'}
                     fontSize={'xl'}
+                    color={'grey'}
                     >
                         {content}
                 </Text>

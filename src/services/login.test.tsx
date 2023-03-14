@@ -7,6 +7,7 @@ describe('teste de login',()=>{
     it('Deve exibir um alert com um bem vindo caso o email seja válido', async()=>{
         const response = await Login(mockEmail, mockPassowrd)
         expect(response).toBeTruthy()
+        jest.setTimeout(5000)
     })
     it('Deve exibir um erro caso o email ou a senha estejam nulos',async()=>{
         const response = await Login('','')

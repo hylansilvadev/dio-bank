@@ -31,9 +31,7 @@ export const Account = () => {
         }
         getData()
     }, [])
-
-    const actualData = new Date()
-
+    
     if(userData && id !== userData.id){
         navigate('/')
     }
@@ -53,16 +51,13 @@ export const Account = () => {
                     (
                         <>
                             <CardInfo 
-                            mainContent={`Bem vindo ${userData?.name} !`}  
-                            content={`
-                                        ${actualData.getUTCDay()} / 
-                                        ${actualData.getUTCMonth()} / 
-                                        ${actualData.getUTCFullYear()} 
-                                        ${actualData.getUTCHours()}:
-                                        ${actualData.getUTCMinutes()}:
-                                        ${actualData.getUTCSeconds()}
-                                `}/>
-                            <CardInfo mainContent="Saldo atual" content={`Saldo: R$${userData?.balance}`}/>
+                                mainContent={`Nome:`}  
+                                content={`${userData?.name}`}
+                                />
+                            <CardInfo 
+                                mainContent={`Email:`} 
+                                content={`${userData.email}`}
+                            />
                         </>
                     )
                 }

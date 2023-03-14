@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react"
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import { changeLocalStorage } from "../../services/storage"
 import { AppContext } from "../AppContext"
 
 export const Header = () =>{
@@ -14,6 +15,9 @@ export const Header = () =>{
     const navigate = useNavigate()
     const logout = () =>{
         setIsLoggedIn(false)
+        changeLocalStorage({
+            login:false
+        })
         navigate(`/`)
     }
 

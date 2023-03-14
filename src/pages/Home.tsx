@@ -7,6 +7,7 @@ import { Login } from '../services/login'
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AppContext } from '../Components/AppContext'
+import { changeLocalStorage } from '../services/storage'
 
 
 export const Home = () =>{
@@ -25,6 +26,7 @@ export const Home = () =>{
 
         }else{
             setIsLoggedIn(true)
+            changeLocalStorage({login:true})
             navigate(`/account/userText`)
         }
         
